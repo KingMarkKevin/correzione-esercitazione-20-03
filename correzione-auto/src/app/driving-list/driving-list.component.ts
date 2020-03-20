@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Drive } from '../drive.model'
 import { Observable } from 'rxjs';
+import { Rent } from '../rent.model';
 
 @Component({
   selector: 'app-driving-list',
@@ -9,6 +10,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./driving-list.component.css']
 })
 export class DrivingListComponent implements OnInit {
+  @Input() rentList : Rent[];
   obs_drive: Observable<Drive[]>;
   driveList: Drive[];
   selectedCar : Drive;
