@@ -1,4 +1,6 @@
 <!--{{driveList | json}}-->
 <ul>
-	<li *ngFor="let a of driveList"><button (click) = "onNoleggia(a)">Noleggia</button>{{a.tipo}} | {{a.tariffa}}</li>
+	<li *ngFor="let a of driveList">{{a.tipo}} | {{a.tariffa}}<button (click) = "onNoleggia(a)">Noleggia </button></li>
 </ul>
+
+<app-rented [drive] = "selectedCar"></app-rented>
