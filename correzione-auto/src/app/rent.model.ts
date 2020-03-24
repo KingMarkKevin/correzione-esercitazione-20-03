@@ -8,4 +8,8 @@ export class Rent {
     this.drive = drive;
     this.n_rent = n_rent;
   }
+
+  Incremento(): void {
+    this.n_rent += 1;
+  }
 }

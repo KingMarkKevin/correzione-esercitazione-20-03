@@ -11,6 +11,7 @@ import { Rent } from '../rent.model';
 })
 export class DrivingListComponent implements OnInit {
   @Input() rentList : Rent[];
+  @Input() ciao : Rent;
   obs_drive: Observable<Drive[]>;
   driveList: Drive[];
   selectedCar : Drive;
@@ -31,6 +32,7 @@ export class DrivingListComponent implements OnInit {
   {
     console.log(auto);
     this.selectedCar = auto;
+    this.rentList.push(new Rent(auto,1));
     return false
   }
 }

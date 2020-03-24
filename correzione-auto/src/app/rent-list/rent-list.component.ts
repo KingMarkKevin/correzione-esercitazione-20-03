@@ -9,6 +9,7 @@ import { Rent } from '../rent.model';
 export class RentListComponent implements OnInit {
 
   @Input() rentList: Rent[];
+  @Input() count: number;
   constructor() { }
 
   ngOnInit(): void {
